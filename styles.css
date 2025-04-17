@@ -68,6 +68,7 @@ h1 {
 .right {
     text-align: left;
 }
+
 /* Claim Container */
 .claim-container {
     text-align: left;
@@ -108,35 +109,40 @@ h1 {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-  }
+    /* gap: 4px; */
+    font-family: sans-serif;
+}
 
-  .form-line {
+.form-line {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 8px;
-  }
-  .date-line-wrapper {
+}
+
+.date-line-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-  }
-  
-  .line-input.date-line {
+}
+
+.line-input.date-line {
     border: none;
     border-bottom: 1px solid #000;
     width: 250px;
-    padding: 2px 4px;
+    padding: 2px 2px;
     font-size: 14px;
     outline: none;
-  }
-  
-  .date-label-line {
+}
+
+.date-label-line {
     font-size: 12px;
     color: #555;
-    margin-left: 196px; /* Align under the input */
-    margin-top: 2px;
-  }
+    margin-left: 19px;
+    /* Align under the input */
+    margin-top: 0;
+    padding-top: 0;
+}
 
 .bordered {
     border: 1px solid #000;
@@ -154,38 +160,38 @@ h1 {
     padding: 2px 4px;
     font-size: 14px;
     outline: none;
-  }
-  
-  /* Input widths */
-  .date-line {
+}
+
+/* Input widths */
+.date-line {
     width: 150px;
-  }
-  
-  .provider-line {
+}
+
+.provider-line {
     width: 220px;
-  }
-  
-  .frequency-line {
+}
+
+.frequency-line {
     width: 220px;
-  }
-  
-  /* Sub-labels under input */
-  .sub-labels {
+}
+
+/* Sub-labels under input */
+.sub-labels {
     display: flex;
     gap: 70px;
     margin-top: 4px;
-  }
-  
-  /* Keep label texts aligned under respective inputs */
-  .date-label-line,
-  .provider-label-line,
-  .frequency-label-line {
+}
+
+/* Keep label texts aligned under respective inputs */
+.date-label-line,
+.provider-label-line,
+.frequency-label-line {
     font-size: 12px;
     color: #555;
     min-width: 150px;
     text-align: center;
-  }
-  
+}
+
 /* Checkbox Group Styles */
 .checkbox-group {
     display: flex;
@@ -239,6 +245,21 @@ h1 {
     width: 100px;
 }
 
+.contact-line-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.contact-sub-labels {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 250px; 
+    font-size: 12px;
+    color: #555;
+  }
+  
 .contact-line {
     width: 200px;
 }
@@ -262,6 +283,8 @@ h1 {
     font-size: 10px;
     color: #666;
     margin-top: 2px;
+    /* width: 200px;
+    text-align: left; */
 }
 
 /* Working Status Styles */
@@ -351,13 +374,13 @@ footer {
     bottom: 40px;
     left: 40px;
     right: 40px;
-  }
-  
-  .footer-right {
+}
+
+.footer-right {
     text-align: right;
     display: flex;
     flex-direction: column;
-  }
+}
 
 .worker-id {
     flex: 1;
@@ -402,6 +425,12 @@ footer {
     margin: 0 10px;
 }
 
+.contact-label,
+.on-label {
+    white-space: nowrap;
+}
+
+
 /* Print Styles */
 @media print {
     body {
@@ -433,10 +462,11 @@ footer {
     .print-controls {
         display: none;
     }
+
     footer {
         position: absolute;
         bottom: 40px;
         left: 40px;
         right: 40px;
-      }
+    }
 }
